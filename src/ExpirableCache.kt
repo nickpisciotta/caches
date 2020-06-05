@@ -1,7 +1,7 @@
 import java.util.concurrent.TimeUnit
 
 class ExpirableCache(private val delgate: Cache,
-                     private val flushInterval: Long = TimeUnit.MINUTES.toMillis(1)): Cache by delgate {
+                     private val flushInterval: Long = TimeUnit.DAYS.toMillis(1)): Cache by delgate {
 
 
     private  val lastFlushTime = System.nanoTime()
